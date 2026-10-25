@@ -10,7 +10,7 @@
 body{margin:0;background:var(--fondo);color:var(--texto);font-family:Georgia,serif}
 header{max-width:720px;margin:0 auto;padding:18px 20px;display:flex;justify-content:space-between;align-items:center;gap:10px}
 .brand{font-size:21px;font-weight:bold;display:flex;align-items:center;gap:12px}
-.logo{width:64px;height:64px;border-radius:50%;border:3px solid var(--marco);object-fit:cover;flex:none}
+.cauri{width:36px;height:26px;border-radius:50%;background:var(--marco);position:relative;flex:none;box-shadow:inset 0 -4px 0 rgba(0,0,0,.28)}.cauri::after{content:"";position:absolute;left:7px;right:7px;top:50%;height:3px;margin-top:-1px;background:rgba(0,0,0,.35);border-radius:2px}
 .brand small{display:block;font-size:13px;color:var(--acento);letter-spacing:2px}
 .lang button{border:2px solid var(--marco);background:var(--tarjeta);color:var(--texto);padding:8px 12px;border-radius:20px;font-weight:bold;cursor:pointer}
 .hero{max-width:720px;margin:0 auto;padding:10px 20px 30px}
@@ -25,12 +25,12 @@ header{max-width:720px;margin:0 auto;padding:18px 20px;display:flex;justify-cont
 .rating strong{font-size:28px;color:var(--precio-fuerte)}
 .wrap{max-width:720px;margin:0 auto;padding:10px 20px 40px}
 h2{font-size:34px;margin:34px 0 10px}
-h2 em{color:#405122;font-style:italic}
+h2 em{color:var(--acento);font-style:italic}
 p,li{font-size:18px;line-height:1.65}
 .cards{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:16px}
 .card{background:var(--tarjeta);border:1px solid var(--tarjeta-borde);border-top:8px solid var(--card-top);border-radius:16px;padding:18px}
 .hilo{height:6px;background:linear-gradient(90deg,#6e1a1a,#3d5a35,#20586e,#d3bb19,#7a1f1f,#5e2440,#4a2c4a)}
-body.tema-verde .cards .card:nth-child(1){border-top-color:#6e1a1a}body.tema-verde .cards .card:nth-child(2){border-top-color:#3d5a35}body.tema-verde .cards .card:nth-child(3){border-top-color:#20586e}body.tema-verde .cards .card:nth-child(4){border-top-color:#d3bb19}body.tema-verde .cards .card:nth-child(5){border-top-color:#7a1f1f}body.tema-verde .cards .card:nth-child(6){border-top-color:#5e2440}
+body.tema-verde .cards .card:nth-child(1){border-top-color:#7a2a2a}body.tema-verde .cards .card:nth-child(2){border-top-color:#4a6741}body.tema-verde .cards .card:nth-child(3){border-top-color:#2a6578}body.tema-verde .cards .card:nth-child(4){border-top-color:#b89a3e}body.tema-verde .cards .card:nth-child(5){border-top-color:#8a2a2a}body.tema-verde .cards .card:nth-child(6){border-top-color:#6b3050}
 .card b{display:block;font-size:19px;margin-bottom:6px}
 .card small{font-size:16px;color:var(--muted);line-height:1.5}
 .precio{background:var(--tarjeta);border:3px solid var(--marco);border-radius:18px;padding:22px;margin:16px 0;display:flex;justify-content:space-between;align-items:center;gap:14px}
@@ -54,25 +54,35 @@ footer{max-width:720px;margin:0 auto;padding:24px 20px 40px;text-align:center;fo
 footer a{color:var(--footer-link)}
 @media(max-width:640px){.hero h1{font-size:34px}.cards,.galeria,.palette{grid-template-columns:1fr}.precio{flex-direction:column;align-items:flex-start}.qrbox{flex-direction:column;text-align:center}}
 
-body.tema-verde{--fondo:#fdf8ee;--texto:#2b1a12;--acento:#405122;--marco:#d3bb19;--tarjeta:#fff;--tarjeta-borde:#e9d9a8;--card-top:#d3bb19;--btn-fondo:#405122;--btn-texto:#fff;--btn-borde:#405122;--btn2-fondo:#2b1a12;--btn2-texto:#fdf8ee;--btn2-borde:#2b1a12;--precio-fuerte:#8a6d1f;--footer-link:#8a6d1f;--muted:#6b5a4a;--input-fondo:#fff}
-body.tema-original{--fondo:#fdf8ee;--texto:#2b1a12;--acento:#8a6d1f;--marco:#c9a227;--tarjeta:#fff;--tarjeta-borde:#e9d9a8;--card-top:#c9a227;--btn-fondo:#c9a227;--btn-texto:#2b1a12;--btn-borde:#c9a227;--btn2-fondo:#2b1a12;--btn2-texto:#fdf8ee;--btn2-borde:#2b1a12;--precio-fuerte:#8a6d1f;--footer-link:#8a6d1f;--muted:#6b5a4a;--input-fondo:#fff}
-body.tema-lujo{--fondo:#0e1d15;--texto:#f3ead3;--acento:#d3bb19;--marco:#d3bb19;--tarjeta:#1b2e22;--tarjeta-borde:#4a5a44;--card-top:#d3bb19;--btn-fondo:#d3bb19;--btn-texto:#12211a;--btn-borde:#d3bb19;--btn2-fondo:#f3ead3;--btn2-texto:#12211a;--btn2-borde:#f3ead3;--precio-fuerte:#d3bb19;--footer-link:#d3bb19;--muted:#b8ac8a;--input-fondo:#0e1d15}
-body.tema-lujo .visit a{color:#d3bb19}
-body.tema-lujo h2{border-bottom:2px solid #d3bb19;padding-bottom:10px}
-body.tema-lujo h2::before{content:"✦ ";color:#d3bb19}
-body.tema-lujo .hero img{box-shadow:0 0 0 5px #0e1d15,0 0 0 7px #d3bb19}
-body.tema-lujo .card{border-color:#6b5a2e}
-body.tema-lujo .pendiente{border:2px solid #d3bb19}
-body.tema-lujo footer{border-top:2px solid #d3bb19}
+body.tema-verde{--fondo:#F7F3E8;--texto:#2b2118;--acento:#1E4A2E;--marco:#C2A24A;--tarjeta:#FFFDF7;--tarjeta-borde:#E3D9BE;--card-top:#C2A24A;--btn-fondo:#1E4A2E;--btn-texto:#F7F3E8;--btn-borde:#1E4A2E;--btn2-fondo:#2b2118;--btn2-texto:#F7F3E8;--btn2-borde:#2b2118;--precio-fuerte:#8C6A3C;--footer-link:#6B7F5E;--muted:#6b5a4a;--input-fondo:#FFFDF7}
+body.tema-original{--fondo:#FAF6EC;--texto:#2B2118;--acento:#B9975B;--marco:#B9975B;--tarjeta:#FFFDF7;--tarjeta-borde:#E8DCC0;--card-top:#B9975B;--btn-fondo:#B9975B;--btn-texto:#2B2118;--btn-borde:#B9975B;--btn2-fondo:#2B2118;--btn2-texto:#FAF6EC;--btn2-borde:#2B2118;--precio-fuerte:#8C6A3C;--footer-link:#8C6A3C;--muted:#6b5a4a;--input-fondo:#FFFDF7}
+body.tema-lujo{--fondo:#141412;--texto:#EFE6D0;--acento:#C9A86A;--marco:#C9A86A;--tarjeta:#1E1E1A;--tarjeta-borde:#3A352A;--card-top:#C9A86A;--btn-fondo:#C9A86A;--btn-texto:#141412;--btn-borde:#C9A86A;--btn2-fondo:#EFE6D0;--btn2-texto:#141412;--btn2-borde:#EFE6D0;--precio-fuerte:#C9A86A;--footer-link:#C9A86A;--muted:#B8AC8A;--input-fondo:#1E1E1A}
+body.tema-lujo .visit a{color:#C9A86A}
+body.tema-lujo h2{border-bottom:2px solid #C9A86A;padding-bottom:10px}
+body.tema-lujo h2::before{content:"";display:inline-block;width:15px;height:17px;background:#C9A86A;clip-path:polygon(0 0,100% 0,76% 50%,100% 100%,0 100%,24% 50%);margin-right:10px;vertical-align:middle}
+body.tema-lujo .hero img{box-shadow:0 0 0 5px #141412,0 0 0 7px #C9A86A}
+body.tema-lujo .card{border-color:#3A352A}
+body.tema-lujo .pendiente{border:2px solid #C9A86A}
+body.tema-lujo footer{border-top:2px solid #C9A86A}
 .selector{background:#2b1a12;color:#fdf8ee;padding:12px 14px;text-align:center;font-size:15px}
 .selector button{border:2px solid #d3bb19;background:transparent;color:#fdf8ee;padding:6px 12px;border-radius:20px;font-weight:bold;cursor:pointer;margin:2px}
 .selector button.activo{background:#d3bb19;color:#12211a}
+
+.cuentas{height:12px;margin:28px auto;max-width:720px;background-image:radial-gradient(circle,var(--marco) 3px,transparent 3.5px);background-size:26px 12px;background-repeat:repeat-x;background-position:center}
+body.tema-verde .cuentas{background-image:radial-gradient(circle,#1E4A2E 3px,transparent 3.5px),radial-gradient(circle,#C2A24A 3px,transparent 3.5px);background-size:52px 12px,52px 12px;background-position:0 center,26px center}
+.franja-tejida{display:none}
+body.tema-verde .franja-tejida{display:block;height:10px;background:repeating-linear-gradient(90deg,#1E4A2E 0 16px,#F7F3E8 16px 22px,#C2A24A 22px 26px,#F7F3E8 26px 32px)}
+body.tema-verde h2::before{content:"";display:inline-block;width:13px;height:13px;background:var(--acento);border-radius:100% 0 100% 0;transform:rotate(-45deg);margin-right:10px}
+body.tema-original h2{border-bottom:4px double var(--marco);padding-bottom:10px}
+body.tema-original h2::before{content:"";display:inline-block;width:18px;height:12px;border-radius:50%;background:var(--marco);box-shadow:inset 0 -3px 0 rgba(0,0,0,.28);margin-right:10px;vertical-align:middle}
+body.tema-original .hero img{box-shadow:0 0 0 4px #FAF6EC,0 0 0 6px #B9975B}
+body.tema-lujo{background-image:repeating-linear-gradient(45deg,rgba(201,168,106,.07) 0 1px,transparent 1px 30px),repeating-linear-gradient(-45deg,rgba(201,168,106,.07) 0 1px,transparent 1px 30px)}
 </style>
 </head>
 <body class="tema-verde">
-<div class="selector"><span data-es="🎨 Diseños — elige cómo se ve la página (temporal, solo para elegir)" data-en="🎨 Designs — choose how the page looks (temporary, just to choose)">🎨 Diseños — elige cómo se ve la página (temporal, solo para elegir)</span><br><button type="button" onclick="setTheme('tema-verde')" data-tema-btn="tema-verde">Verde y Amarillo</button> <button type="button" onclick="setTheme('tema-original')" data-tema-btn="tema-original">Original</button> <button type="button" onclick="setTheme('tema-lujo')" data-tema-btn="tema-lujo">Lujo</button></div>
+<div class="selector"><span data-es="🎨 Diseños — elige cómo se ve la página (temporal, solo para elegir)" data-en="🎨 Designs — choose how the page looks (temporary, just to choose)">🎨 Diseños — elige cómo se ve la página (temporal, solo para elegir)</span><br><button type="button" onclick="setTheme('tema-verde')" data-tema-btn="tema-verde">Nº I Verde de la Casa</button> <button type="button" onclick="setTheme('tema-original')" data-tema-btn="tema-original">Nº II Crema y Dorado</button> <button type="button" onclick="setTheme('tema-lujo')" data-tema-btn="tema-lujo">Nº III Noche Premium</button></div>
 <header>
-<div class="brand"><img class="logo" src="imgs/logo.jpg" alt="Logo Botánica Cuatro Caminos"><div>Botánica Cuatro Caminos<small>TAMPA, FLORIDA</small></div></div>
+<div class="brand"><span class="cauri" aria-hidden="true"></span><div>Botánica Cuatro Caminos<small>TAMPA, FLORIDA</small></div></div>
 <div class="lang"><button onclick="setLang('es')">ES</button> <button onclick="setLang('en')">EN</button></div>
 </header>
 <div class="hilo"></div>
@@ -80,11 +90,12 @@ body.tema-lujo footer{border-top:2px solid #d3bb19}
 <div class="eyebrow" data-es="TIENDA DE ARTÍCULOS YORUBA · DESDE HACE 40 AÑOS" data-en="YORUBA RELIGIOUS GOODS STORE · 40 YEARS OF TRADITION">TIENDA DE ARTÍCULOS YORUBA · DESDE HACE 40 AÑOS</div>
 <h1 data-es="La botánica más grande de Florida, <em>cinco botánicas juntas</em>" data-en="Florida's largest botanica, <em>five botanicas together</em>">La botánica más grande de Florida, <em>cinco botánicas juntas</em></h1>
 <p data-es="Tradición, fe y conocimiento de generaciones. Todo lo que buscas para tu camino espiritual, en un solo lugar, con los mejores precios." data-en="Tradition, faith and generations of knowledge. Everything you seek for your spiritual path, in one place, at the best prices.">Tradición, fe y conocimiento de generaciones. Todo lo que buscas para tu camino espiritual, en un solo lugar, con los mejores precios.</p>
-<img src="imgs/fachada.jpg" alt="Fachada real de Botánica Cuatro Caminos">
+<img src="imgs/tienda-atardecer.jpg" alt="La tienda al atardecer">
 <a class="btn" href="tel:+18135135344" data-es="📞 Llamar: (813) 513-5344" data-en="📞 Call: (813) 513-5344">📞 Llamar: (813) 513-5344</a>
 <a class="btn dark" href="https://www.google.com/maps/place/Bot%C3%A1nica+Cuatro+Caminos/@28.0249799,-82.4823985,1051m/data=!3m2!1e3!4b1!4m6!3m5!1s0x88c2c1fb8026bf01:0x4b5622dba6e64f7f!8m2!3d28.0249799!4d-82.4823985!16s%2Fg%2F11h1vbkqx7" data-es="📍 Cómo llegar" data-en="📍 Get directions">📍 Cómo llegar</a>
 <div class="rating"><strong>4.8 ★</strong> <span data-es="190 reseñas en Google" data-en="190 Google reviews">190 reseñas en Google</span></div>
 </section>
+<div class="cuentas" aria-hidden="true"></div>
 <div class="wrap">
 <h2 data-es="Lo que encuentras <em>aquí</em>" data-en="What you will find <em>here</em>">Lo que encuentras <em>aquí</em></h2>
 <p data-es="Categorías a confirmar con el dueño antes de publicar. Sin precios inventados." data-en="Categories to confirm with the owner before publishing. No invented prices.">Categorías a confirmar con el dueño antes de publicar. Sin precios inventados.</p>
@@ -100,29 +111,27 @@ body.tema-lujo footer{border-top:2px solid #d3bb19}
 <div class="pendiente" data-es="Estos precios se vieron anunciados en TikTok y están PENDIENTES de confirmar con el dueño. No son precios definitivos hasta que él los confirme." data-en="These prices were seen announced on TikTok and are PENDING owner confirmation. They are not definitive prices until the owner confirms them.">Estos precios se vieron anunciados en TikTok y están PENDIENTES de confirmar con el dueño. No son precios definitivos hasta que él los confirme.</div>
 <div class="precio"><b data-es="Coronas" data-en="Crowns">Coronas</b><strong>$50</strong></div>
 <div class="precio"><b data-es="Oferta para Orula" data-en="Orula offer">Oferta para Orula</b><strong>$180</strong></div>
+<div class="cuentas" aria-hidden="true"></div>
 <h2 data-es="Fotos <em>reales</em> de la tienda" data-en="Real photos of <em>the store</em>">Fotos <em>reales</em> de la tienda</h2>
 <p data-es="Fotos reales de la tienda. Nada de fotos de stock." data-en="Real photos of the store. No stock photos.">Fotos reales de la tienda. Nada de fotos de stock.</p>
 <div class="galeria">
-<figure><img src="imgs/murales.jpg" alt="Murales de la fachada"><figcaption data-es="Murales de la fachada" data-en="Storefront murals">Murales de la fachada</figcaption></figure>
-<figure><img src="imgs/murales-2.jpg" alt="Murales de la fachada"><figcaption data-es="Murales de la fachada" data-en="Storefront murals">Murales de la fachada</figcaption></figure>
-<figure><img src="imgs/interior.jpg" alt="Interior de la tienda"><figcaption data-es="Interior de la tienda" data-en="Inside the store">Interior de la tienda</figcaption></figure>
+<figure><img src="imgs/fachada-recorte.jpg" alt="Letrero de la tienda"><figcaption data-es="Fachada de la tienda" data-en="Storefront sign">Fachada de la tienda</figcaption></figure>
+<figure><img src="imgs/interior-productos.jpg" alt="Hierbas y productos"><figcaption data-es="Hierbas y productos de la tienda" data-en="Herbs and store products">Hierbas y productos de la tienda</figcaption></figure>
 <figure><img src="imgs/soperas.jpg" alt="Soperas y coronas"><figcaption data-es="Soperas y coronas" data-en="Soperas and crowns">Soperas y coronas</figcaption></figure>
-<figure><img src="imgs/soperas-vitrina.jpg" alt="Soperas en la vitrina"><figcaption data-es="Soperas en la vitrina" data-en="Soperas in the window">Soperas en la vitrina</figcaption></figure>
+<figure><img src="imgs/soperas-vitrina-recorte.jpg" alt="Soperas en la vitrina"><figcaption data-es="Soperas en la vitrina" data-en="Soperas in the window">Soperas en la vitrina</figcaption></figure>
 <figure><img src="imgs/tela-pavo.jpg" alt="Telas de la tienda"><figcaption data-es="Telas de la tienda" data-en="Store cloths">Telas de la tienda</figcaption></figure>
 <figure><img src="imgs/tela-ochosi.jpg" alt="Telas de la tienda"><figcaption data-es="Telas de la tienda" data-en="Store cloths">Telas de la tienda</figcaption></figure>
-<figure><img src="imgs/buda.jpg" alt="Imágenes y estatuas"><figcaption data-es="Imágenes y estatuas" data-en="Images and statues">Imágenes y estatuas</figcaption></figure>
-<figure><img src="imgs/camion.jpg" alt="Camión de la tienda"><figcaption data-es="Camión de la tienda" data-en="Store truck">Camión de la tienda</figcaption></figure>
-<figure><img src="imgs/tienda-atardecer.jpg" alt="La tienda al atardecer"><figcaption data-es="La tienda al atardecer" data-en="The store at dusk">La tienda al atardecer</figcaption></figure>
 </div>
 
 <p data-es="Lo que se ve en la tienda, sin fotos inventadas y sin inventar significados. El dueño confirma cualquier representación antes de publicar." data-en="What is seen in the store, without invented photos or invented meanings. The owner confirms any representation before publishing.">Lo que se ve en la tienda, sin fotos inventadas y sin inventar significados. El dueño confirma cualquier representación antes de publicar.</p>
 <div class="cards">
-<div class="card"><b data-es="📿 Elekes — collares de cuentas" data-en="📿 Elekes — bead necklaces">📿 Elekes — collares de cuentas</b><small data-es="Cada eleke sigue el patrón de su santo: Elegguá rojo y negro, Orula verde y amarillo, Yemayá azul y blanco, Oshún amarillo dorado. El patrón no se inventa ni se cambia." data-en="Each eleke follows its orisha's pattern: Elegguá red and black, Orula green and yellow, Yemayá blue and white, Oshún golden yellow. The pattern is never invented or changed.">Cada eleke sigue el patrón de su santo: Elegguá rojo y negro, Orula verde y amarillo, Yemayá azul y blanco, Oshún amarillo dorado. El patrón no se inventa ni se cambia.</small></div>
-<div class="card"><b data-es="🏺 Soperas" data-en="🏺 Soperas">🏺 Soperas</b><small data-es="Recipientes que se ven en la tienda, blancos, azules, dorados y verdes con amarillo: cada sopera lleva los colores de su santo, y así se presenta en la tienda." data-en="Vessels seen in the store, in white, blue, gold and green with yellow: each sopera carries its orisha's colors, just as it is presented in the store.">Recipientes que se ven en la tienda, blancos, azules, dorados y verdes con amarillo: cada sopera lleva los colores de su santo, y así se presenta en la tienda.</small></div>
+<div class="card"><b data-es="📿 Elekes — collares de cuentas" data-en="📿 Elekes — bead necklaces">📿 Elekes — collares de cuentas</b><small data-es="Collares de cuentas hechos a mano, con patrones y combinaciones tradicionales. Cada patrón se respeta tal como se hace en la tradición." data-en="Handmade bead necklaces, with traditional patterns and color combinations. Each pattern is respected just as it is made in the tradition.">Collares de cuentas hechos a mano, con patrones y combinaciones tradicionales. Cada patrón se respeta tal como se hace en la tradición.</small></div>
+<div class="card"><b data-es="🏺 Soperas" data-en="🏺 Soperas">🏺 Soperas</b><small data-es="Recipientes con tapa que se ven en la tienda: blancos, azules, dorados y verdes, en cerámica y porcelana." data-en="Lidded vessels seen in the store: white, blue, gold and green, in ceramic and porcelain.">Recipientes con tapa que se ven en la tienda: blancos, azules, dorados y verdes, en cerámica y porcelana.</small></div>
 <div class="card"><b data-es="🕯️ Velas, imágenes y vestidos" data-en="🕯️ Candles, images and dresses">🕯️ Velas, imágenes y vestidos</b><small data-es="Velas, estatuas y muñecas con vestidos elaborados, en los colores vivos que se ven en la tienda." data-en="Candles, statues and dolls in elaborate dresses, in the vivid colors seen in the store.">Velas, estatuas y muñecas con vestidos elaborados, en los colores vivos que se ven en la tienda.</small></div>
 <div class="card"><b data-es="🌿 Hierbas, baños y herramientas del altar" data-en="🌿 Herbs, baths and altar tools">🌿 Hierbas, baños y herramientas del altar</b><small data-es="Hierbas, baños, esencias y herramientas para el altar, como se venden en la tienda." data-en="Herbs, baths, essences and tools for the altar, as sold in the store.">Hierbas, baños, esencias y herramientas para el altar, como se venden en la tienda.</small></div>
 </div>
 <p data-es="Cuatro Caminos no es solo una tienda: es un espacio de fe, respeto y tradición afrocubana, donde cada persona es atendida con conocimiento y con el corazón." data-en="Cuatro Caminos is more than a store: it is a space of faith, respect and Afro-Cuban tradition, where every person is served with knowledge and heart.">Cuatro Caminos no es solo una tienda: es un espacio de fe, respeto y tradición afrocubana, donde cada persona es atendida con conocimiento y con el corazón.</p>
+<div class="cuentas" aria-hidden="true"></div>
 <h2 data-es="Haz tu encargo <em>por WhatsApp</em>" data-en="Place your order <em>on WhatsApp</em>">Haz tu encargo <em>por WhatsApp</em></h2>
 <p data-es="Sin pago en línea por ahora: mandas tu encargo por WhatsApp y la tienda te confirma disponibilidad y total." data-en="No online payment yet: send your order on WhatsApp and the store confirms availability and total.">Sin pago en línea por ahora: mandas tu encargo por WhatsApp y la tienda te confirma disponibilidad y total.</p>
 <div class="encargo">
@@ -163,9 +172,10 @@ body.tema-lujo footer{border-top:2px solid #d3bb19}
 <p data-es="El código abre el perfil oficial de Google de Botánica Cuatro Caminos." data-en="The code opens the official Google profile of Botánica Cuatro Caminos.">El código abre el perfil oficial de Google de Botánica Cuatro Caminos.</p></div>
 </div>
 </div>
+<div class="franja-tejida" aria-hidden="true"></div>
 <footer>
 Botánica Cuatro Caminos · 2310 W Waters Ave, Tampa, FL 33604 · (813) 513-5344 · 4.8 ★ en Google<br>
-<span data-es="Diseño de demostración basado en el estilo de La Semilla. Datos verificados en Google el 24 de octubre de 2026." data-en="Demonstration design based on the La Semilla style. Data verified on Google on October 24, 2026.">Diseño de demostración basado en el estilo de La Semilla. Datos verificados en Google el 24 de octubre de 2026.</span>
+<span data-es="Diseño de demostración basado en el estilo de La Semilla. Datos verificados en Google el 24 de octubre de 2026." data-en="Demonstration design based on the La Semilla style. Data verified on Google on October 24, 2026.">Diseño de demostración basado en el estilo de La Semilla. Datos verificados en Google el 24 de octubre de 2026.</span><br><span data-es="Con respeto a la tradición: esta página muestra elementos y oficios — cuentas, hojas, cauríes y cerámica — y los artículos se venden como productos de tienda." data-en="With respect for tradition: this page shows elements and crafts — beads, leaves, cowries and ceramics — and items are sold as store products.">Con respeto a la tradición: esta página muestra elementos y oficios — cuentas, hojas, cauríes y cerámica — y los artículos se venden como productos de tienda.</span>
 </footer>
 <script>
 function setLang(l){document.documentElement.lang=l;document.querySelectorAll('[data-es]').forEach(function(e){e.innerHTML=e.getAttribute(l==='es'?'data-es':'data-en')})}
