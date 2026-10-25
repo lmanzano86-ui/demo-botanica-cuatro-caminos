@@ -7,55 +7,70 @@
 <meta name="description" content="Botánica Cuatro Caminos en Tampa, FL. 40 años de tradición, 5 botánicas juntas. 2310 W Waters Ave. (813) 513-5344.">
 <style>
 *{box-sizing:border-box}
-body{margin:0;background:#fdf8ee;color:#2b1a12;font-family:Georgia,serif}
+body{margin:0;background:var(--fondo);color:var(--texto);font-family:Georgia,serif}
 header{max-width:720px;margin:0 auto;padding:18px 20px;display:flex;justify-content:space-between;align-items:center;gap:10px}
 .brand{font-size:21px;font-weight:bold;display:flex;align-items:center;gap:12px}
-.logo{width:64px;height:64px;border-radius:50%;border:3px solid #d3bb19;object-fit:cover;flex:none}
-.brand small{display:block;font-size:13px;color:#405122;letter-spacing:2px}
-.lang button{border:2px solid #d3bb19;background:#fff;padding:8px 12px;border-radius:20px;font-weight:bold;cursor:pointer}
+.logo{width:64px;height:64px;border-radius:50%;border:3px solid var(--marco);object-fit:cover;flex:none}
+.brand small{display:block;font-size:13px;color:var(--acento);letter-spacing:2px}
+.lang button{border:2px solid var(--marco);background:var(--tarjeta);color:var(--texto);padding:8px 12px;border-radius:20px;font-weight:bold;cursor:pointer}
 .hero{max-width:720px;margin:0 auto;padding:10px 20px 30px}
-.eyebrow{color:#405122;letter-spacing:3px;font-weight:bold;font-size:13px}
+.eyebrow{color:var(--acento);letter-spacing:3px;font-weight:bold;font-size:13px}
 .hero h1{font-size:44px;line-height:1.08;margin:14px 0 12px}
-.hero h1 em{color:#405122;font-style:italic}
+.hero h1 em{color:var(--acento);font-style:italic}
 .hero p{font-size:19px;line-height:1.65;max-width:600px}
-.hero img{width:100%;border-radius:18px;border:3px solid #d3bb19;margin:18px 0}
-.btn{display:inline-block;background:#405122;color:#fff;padding:14px 24px;border-radius:30px;font-weight:bold;text-decoration:none;margin:5px 5px 5px 0;border:2px solid #405122}
-.btn.dark{background:#2b1a12;color:#fdf8ee;border-color:#2b1a12}
+.hero img{width:100%;border-radius:18px;border:3px solid var(--marco);margin:18px 0}
+.btn{display:inline-block;background:var(--btn-fondo);color:var(--btn-texto);padding:14px 24px;border-radius:30px;font-weight:bold;text-decoration:none;margin:5px 5px 5px 0;border:2px solid var(--btn-borde)}
+.btn.dark{background:var(--btn2-fondo);color:var(--btn2-texto);border-color:var(--btn2-borde)}
 .rating{font-size:18px;margin-top:14px}
-.rating strong{font-size:28px;color:#8a6d1f}
+.rating strong{font-size:28px;color:var(--precio-fuerte)}
 .wrap{max-width:720px;margin:0 auto;padding:10px 20px 40px}
 h2{font-size:34px;margin:34px 0 10px}
 h2 em{color:#405122;font-style:italic}
 p,li{font-size:18px;line-height:1.65}
 .cards{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:16px}
-.card{background:#fff;border:1px solid #e9d9a8;border-top:8px solid #d3bb19;border-radius:16px;padding:18px}
+.card{background:var(--tarjeta);border:1px solid var(--tarjeta-borde);border-top:8px solid var(--card-top);border-radius:16px;padding:18px}
 .hilo{height:6px;background:linear-gradient(90deg,#6e1a1a,#3d5a35,#20586e,#d3bb19,#7a1f1f,#5e2440,#4a2c4a)}
-.cards .card:nth-child(1){border-top-color:#6e1a1a}.cards .card:nth-child(2){border-top-color:#3d5a35}.cards .card:nth-child(3){border-top-color:#20586e}.cards .card:nth-child(4){border-top-color:#d3bb19}.cards .card:nth-child(5){border-top-color:#7a1f1f}.cards .card:nth-child(6){border-top-color:#5e2440}
+body.tema-verde .cards .card:nth-child(1){border-top-color:#6e1a1a}body.tema-verde .cards .card:nth-child(2){border-top-color:#3d5a35}body.tema-verde .cards .card:nth-child(3){border-top-color:#20586e}body.tema-verde .cards .card:nth-child(4){border-top-color:#d3bb19}body.tema-verde .cards .card:nth-child(5){border-top-color:#7a1f1f}body.tema-verde .cards .card:nth-child(6){border-top-color:#5e2440}
 .card b{display:block;font-size:19px;margin-bottom:6px}
-.card small{font-size:16px;color:#6b5a4a;line-height:1.5}
-.precio{background:#fff;border:3px solid #d3bb19;border-radius:18px;padding:22px;margin:16px 0;display:flex;justify-content:space-between;align-items:center;gap:14px}
+.card small{font-size:16px;color:var(--muted);line-height:1.5}
+.precio{background:var(--tarjeta);border:3px solid var(--marco);border-radius:18px;padding:22px;margin:16px 0;display:flex;justify-content:space-between;align-items:center;gap:14px}
 .precio b{font-size:20px}
-.precio strong{font-size:38px;color:#8a6d1f;white-space:nowrap}
+.precio strong{font-size:38px;color:var(--precio-fuerte);white-space:nowrap}
 .pendiente{background:#5e2440;color:#fff;border-radius:12px;padding:14px 16px;font-size:16px;line-height:1.6}
 .galeria{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:16px}
-.galeria img{width:100%;border-radius:16px;border:2px solid #d3bb19}
+.galeria img{width:100%;border-radius:16px;border:2px solid var(--marco)}
 .galeria figcaption{font-size:15px;text-align:center;margin-top:6px}
 .palette{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:18px 0}
 .sw{border-radius:14px;padding:18px 12px;text-align:center;color:#fff}
 .sw small{display:block;font-size:14px;margin-top:6px;line-height:1.4}
 .sw.white{background:#fff;color:#2b1a12;border:2px solid #d3bb19}
-.visit{background:#fff;border:3px solid #d3bb19;border-radius:18px;padding:22px;margin-top:24px}
+.visit{background:var(--tarjeta);border:3px solid var(--marco);border-radius:18px;padding:22px;margin-top:24px}
 .hours{width:100%;border-collapse:collapse;margin-top:12px}
-.hours td{padding:10px 8px;border-bottom:1px solid #e9d9a8;font-size:17px}
-.encargo{background:#fff;border:3px solid #d3bb19;border-radius:18px;padding:22px;margin-top:24px}.encargo label{display:block;font-weight:bold;margin:14px 0 4px}.encargo input,.encargo select,.encargo textarea{width:100%;padding:12px;border:2px solid #e9d9a8;border-radius:12px;font-size:17px;font-family:Georgia,serif;background:#fff;box-sizing:border-box}
+.hours td{padding:10px 8px;border-bottom:1px solid var(--tarjeta-borde);font-size:17px}
+.encargo{background:var(--tarjeta);border:3px solid var(--marco);border-radius:18px;padding:22px;margin-top:24px}.encargo label{display:block;font-weight:bold;margin:14px 0 4px}.encargo input,.encargo select,.encargo textarea{width:100%;padding:12px;border:2px solid var(--tarjeta-borde);border-radius:12px;font-size:17px;font-family:Georgia,serif;background:var(--input-fondo);color:var(--texto);box-sizing:border-box}
 .qrbox{display:flex;gap:18px;align-items:center;background:#2a0e1a;color:#f5ead0;border:3px solid #d3bb19;border-radius:18px;padding:16px;margin-top:20px}
 .qrbox img{width:140px;height:140px;background:#fff;padding:6px;border-radius:10px;flex:none}
-footer{max-width:720px;margin:0 auto;padding:24px 20px 40px;text-align:center;font-size:15px;line-height:1.7;color:#6b5a4a}
-footer a{color:#8a6d1f}
+footer{max-width:720px;margin:0 auto;padding:24px 20px 40px;text-align:center;font-size:15px;line-height:1.7;color:var(--muted)}
+footer a{color:var(--footer-link)}
 @media(max-width:640px){.hero h1{font-size:34px}.cards,.galeria,.palette{grid-template-columns:1fr}.precio{flex-direction:column;align-items:flex-start}.qrbox{flex-direction:column;text-align:center}}
+
+body.tema-verde{--fondo:#fdf8ee;--texto:#2b1a12;--acento:#405122;--marco:#d3bb19;--tarjeta:#fff;--tarjeta-borde:#e9d9a8;--card-top:#d3bb19;--btn-fondo:#405122;--btn-texto:#fff;--btn-borde:#405122;--btn2-fondo:#2b1a12;--btn2-texto:#fdf8ee;--btn2-borde:#2b1a12;--precio-fuerte:#8a6d1f;--footer-link:#8a6d1f;--muted:#6b5a4a;--input-fondo:#fff}
+body.tema-original{--fondo:#fdf8ee;--texto:#2b1a12;--acento:#8a6d1f;--marco:#c9a227;--tarjeta:#fff;--tarjeta-borde:#e9d9a8;--card-top:#c9a227;--btn-fondo:#c9a227;--btn-texto:#2b1a12;--btn-borde:#c9a227;--btn2-fondo:#2b1a12;--btn2-texto:#fdf8ee;--btn2-borde:#2b1a12;--precio-fuerte:#8a6d1f;--footer-link:#8a6d1f;--muted:#6b5a4a;--input-fondo:#fff}
+body.tema-lujo{--fondo:#0e1d15;--texto:#f3ead3;--acento:#d3bb19;--marco:#d3bb19;--tarjeta:#1b2e22;--tarjeta-borde:#4a5a44;--card-top:#d3bb19;--btn-fondo:#d3bb19;--btn-texto:#12211a;--btn-borde:#d3bb19;--btn2-fondo:#f3ead3;--btn2-texto:#12211a;--btn2-borde:#f3ead3;--precio-fuerte:#d3bb19;--footer-link:#d3bb19;--muted:#b8ac8a;--input-fondo:#0e1d15}
+body.tema-lujo .visit a{color:#d3bb19}
+body.tema-lujo h2{border-bottom:2px solid #d3bb19;padding-bottom:10px}
+body.tema-lujo h2::before{content:"✦ ";color:#d3bb19}
+body.tema-lujo .hero img{box-shadow:0 0 0 5px #0e1d15,0 0 0 7px #d3bb19}
+body.tema-lujo .card{border-color:#6b5a2e}
+body.tema-lujo .pendiente{border:2px solid #d3bb19}
+body.tema-lujo footer{border-top:2px solid #d3bb19}
+.selector{background:#2b1a12;color:#fdf8ee;padding:12px 14px;text-align:center;font-size:15px}
+.selector button{border:2px solid #d3bb19;background:transparent;color:#fdf8ee;padding:6px 12px;border-radius:20px;font-weight:bold;cursor:pointer;margin:2px}
+.selector button.activo{background:#d3bb19;color:#12211a}
 </style>
 </head>
-<body>
+<body class="tema-verde">
+<div class="selector"><span data-es="🎨 Diseños — elige cómo se ve la página (temporal, solo para elegir)" data-en="🎨 Designs — choose how the page looks (temporary, just to choose)">🎨 Diseños — elige cómo se ve la página (temporal, solo para elegir)</span><br><button type="button" onclick="setTheme('tema-verde')" data-tema-btn="tema-verde">Verde y Amarillo</button> <button type="button" onclick="setTheme('tema-original')" data-tema-btn="tema-original">Original</button> <button type="button" onclick="setTheme('tema-lujo')" data-tema-btn="tema-lujo">Lujo</button></div>
 <header>
 <div class="brand"><img class="logo" src="imgs/logo.jpg" alt="Logo Botánica Cuatro Caminos"><div>Botánica Cuatro Caminos<small>TAMPA, FLORIDA</small></div></div>
 <div class="lang"><button onclick="setLang('es')">ES</button> <button onclick="setLang('en')">EN</button></div>
@@ -155,6 +170,8 @@ Botánica Cuatro Caminos · 2310 W Waters Ave, Tampa, FL 33604 · (813) 513-5344
 <script>
 function setLang(l){document.documentElement.lang=l;document.querySelectorAll('[data-es]').forEach(function(e){e.innerHTML=e.getAttribute(l==='es'?'data-es':'data-en')})}
 function enviarEncargo(){var n=document.getElementById('enc-nombre').value.trim();var p=document.getElementById('enc-producto').value;var c=document.getElementById('enc-cantidad').value||'1';var m=document.getElementById('enc-modo').value;var t=document.getElementById('enc-nota').value.trim();if(!n){alert(document.documentElement.lang==='en'?'Please write your name.':'Escribe tu nombre.');return}var msg='Hola Botánica Cuatro Caminos, quiero hacer un encargo:\n• Nombre: '+n+'\n• Producto: '+p+'\n• Cantidad: '+c+'\n• '+m+(t?'\n• Nota: '+t:'');window.open('https://wa.me/18135135344?text='+encodeURIComponent(msg),'_blank')}
+function setTheme(t){document.body.className=t;try{localStorage.setItem('botanica-tema',t)}catch(e){}document.querySelectorAll('[data-tema-btn]').forEach(function(b){b.classList.toggle('activo',b.getAttribute('data-tema-btn')===t)})}
+(function(){var t=null;try{t=localStorage.getItem('botanica-tema')}catch(e){}setTheme(t||'tema-verde')})();
 </script>
 </body>
 </html>
