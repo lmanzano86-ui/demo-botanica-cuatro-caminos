@@ -9,7 +9,8 @@
 *{box-sizing:border-box}
 body{margin:0;background:#fdf8ee;color:#2b1a12;font-family:Georgia,serif}
 header{max-width:720px;margin:0 auto;padding:18px 20px;display:flex;justify-content:space-between;align-items:center;gap:10px}
-.brand{font-size:21px;font-weight:bold}
+.brand{font-size:21px;font-weight:bold;display:flex;align-items:center;gap:12px}
+.logo{width:64px;height:64px;border-radius:50%;border:3px solid #c9a227;object-fit:cover;flex:none}
 .brand small{display:block;font-size:13px;color:#8a6d1f;letter-spacing:2px}
 .lang button{border:2px solid #c9a227;background:#fff;padding:8px 12px;border-radius:20px;font-weight:bold;cursor:pointer}
 .hero{max-width:720px;margin:0 auto;padding:10px 20px 30px}
@@ -28,6 +29,8 @@ h2 em{color:#8a6d1f;font-style:italic}
 p,li{font-size:18px;line-height:1.65}
 .cards{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:16px}
 .card{background:#fff;border:1px solid #e9d9a8;border-top:8px solid #c9a227;border-radius:16px;padding:18px}
+.hilo{height:6px;background:linear-gradient(90deg,#6e1a1a,#3d5a35,#20586e,#c9a227,#7a1f1f,#5e2440,#4a2c4a)}
+.cards .card:nth-child(1){border-top-color:#6e1a1a}.cards .card:nth-child(2){border-top-color:#3d5a35}.cards .card:nth-child(3){border-top-color:#20586e}.cards .card:nth-child(4){border-top-color:#c9a227}.cards .card:nth-child(5){border-top-color:#7a1f1f}.cards .card:nth-child(6){border-top-color:#5e2440}
 .card b{display:block;font-size:19px;margin-bottom:6px}
 .card small{font-size:16px;color:#6b5a4a;line-height:1.5}
 .precio{background:#fff;border:3px solid #c9a227;border-radius:18px;padding:22px;margin:16px 0;display:flex;justify-content:space-between;align-items:center;gap:14px}
@@ -44,6 +47,7 @@ p,li{font-size:18px;line-height:1.65}
 .visit{background:#fff;border:3px solid #c9a227;border-radius:18px;padding:22px;margin-top:24px}
 .hours{width:100%;border-collapse:collapse;margin-top:12px}
 .hours td{padding:10px 8px;border-bottom:1px solid #e9d9a8;font-size:17px}
+.encargo{background:#fff;border:3px solid #c9a227;border-radius:18px;padding:22px;margin-top:24px}.encargo label{display:block;font-weight:bold;margin:14px 0 4px}.encargo input,.encargo select,.encargo textarea{width:100%;padding:12px;border:2px solid #e9d9a8;border-radius:12px;font-size:17px;font-family:Georgia,serif;background:#fff;box-sizing:border-box}
 .qrbox{display:flex;gap:18px;align-items:center;background:#2a0e1a;color:#f5ead0;border:3px solid #c9a227;border-radius:18px;padding:16px;margin-top:20px}
 .qrbox img{width:140px;height:140px;background:#fff;padding:6px;border-radius:10px;flex:none}
 footer{max-width:720px;margin:0 auto;padding:24px 20px 40px;text-align:center;font-size:15px;line-height:1.7;color:#6b5a4a}
@@ -53,14 +57,15 @@ footer a{color:#8a6d1f}
 </head>
 <body>
 <header>
-<div class="brand">✦ Botánica Cuatro Caminos<small>TAMPA, FLORIDA</small></div>
+<div class="brand"><img class="logo" src="imgs/logo.jpg" alt="Logo Botánica Cuatro Caminos"><div>Botánica Cuatro Caminos<small>TAMPA, FLORIDA</small></div></div>
 <div class="lang"><button onclick="setLang('es')">ES</button> <button onclick="setLang('en')">EN</button></div>
 </header>
+<div class="hilo"></div>
 <section class="hero">
-<div class="eyebrow" data-es="DESDE HACE 40 AÑOS" data-en="40 YEARS OF TRADITION">DESDE HACE 40 AÑOS</div>
+<div class="eyebrow" data-es="TIENDA DE ARTÍCULOS YORUBA · DESDE HACE 40 AÑOS" data-en="YORUBA RELIGIOUS GOODS STORE · 40 YEARS OF TRADITION">TIENDA DE ARTÍCULOS YORUBA · DESDE HACE 40 AÑOS</div>
 <h1 data-es="La botánica más grande de Florida, <em>cinco botánicas juntas</em>" data-en="Florida's largest botanica, <em>five botanicas together</em>">La botánica más grande de Florida, <em>cinco botánicas juntas</em></h1>
 <p data-es="Tradición, fe y conocimiento de generaciones. Todo lo que buscas para tu camino espiritual, en un solo lugar, con los mejores precios." data-en="Tradition, faith and generations of knowledge. Everything you seek for your spiritual path, in one place, at the best prices.">Tradición, fe y conocimiento de generaciones. Todo lo que buscas para tu camino espiritual, en un solo lugar, con los mejores precios.</p>
-<img src="https://drive.google.com/thumbnail?id=1xJY4mMDPnrjVDSU_NeLEUSpNM8_9PW7M&sz=w800" alt="Interior real de Botánica Cuatro Caminos">
+<img src="imgs/fachada.jpg" alt="Fachada real de Botánica Cuatro Caminos">
 <a class="btn" href="tel:+18135135344" data-es="📞 Llamar: (813) 513-5344" data-en="📞 Call: (813) 513-5344">📞 Llamar: (813) 513-5344</a>
 <a class="btn dark" href="https://www.google.com/maps/place/Bot%C3%A1nica+Cuatro+Caminos/@28.0249799,-82.4823985,1051m/data=!3m2!1e3!4b1!4m6!3m5!1s0x88c2c1fb8026bf01:0x4b5622dba6e64f7f!8m2!3d28.0249799!4d-82.4823985!16s%2Fg%2F11h1vbkqx7" data-es="📍 Cómo llegar" data-en="📍 Get directions">📍 Cómo llegar</a>
 <div class="rating"><strong>4.8 ★</strong> <span data-es="190 reseñas en Google" data-en="190 Google reviews">190 reseñas en Google</span></div>
@@ -81,12 +86,18 @@ footer a{color:#8a6d1f}
 <div class="precio"><b data-es="Coronas" data-en="Crowns">Coronas</b><strong>$50</strong></div>
 <div class="precio"><b data-es="Oferta para Orula" data-en="Orula offer">Oferta para Orula</b><strong>$180</strong></div>
 <h2 data-es="Fotos <em>reales</em> de la tienda" data-en="Real photos of <em>the store</em>">Fotos <em>reales</em> de la tienda</h2>
-<p data-es="Fotos reales de Botánica Cuatro Caminos, de su propio Facebook. Nada de fotos de stock." data-en="Real photos of Botánica Cuatro Caminos, from its own Facebook page. No stock photos.">Fotos reales de Botánica Cuatro Caminos, de su propio Facebook. Nada de fotos de stock.</p>
+<p data-es="Fotos reales de la tienda. Nada de fotos de stock." data-en="Real photos of the store. No stock photos.">Fotos reales de la tienda. Nada de fotos de stock.</p>
 <div class="galeria">
-<figure><img src="https://drive.google.com/thumbnail?id=1g32Mny2t8kjmAc9M-p1W3xYSBcedunBe&sz=w800" alt="Vitrina real"><figcaption data-es="Vitrina de la tienda" data-en="Store window display">Vitrina de la tienda</figcaption></figure>
-<figure><img src="https://drive.google.com/thumbnail?id=1vXjaX2G59GBnGnp1V6QH9nE7scmQhOm5&sz=w800" alt="Estatuas reales"><figcaption data-es="Imágenes y estatuas" data-en="Images and statues">Imágenes y estatuas</figcaption></figure>
-<figure><img src="https://drive.google.com/thumbnail?id=1mA-l1uKIydbV1JWH7cSlHTjdd3qd--a4&sz=w800" alt="Tela real"><figcaption data-es="Telas de la tienda" data-en="Store cloths">Telas de la tienda</figcaption></figure>
-<figure><img src="https://drive.google.com/thumbnail?id=17qXN77COqemReygdV0kbrPLLQKM0xjsH&sz=w800" alt="Tela amarilla real"><figcaption data-es="Telas de la tienda" data-en="Store cloths">Telas de la tienda</figcaption></figure>
+<figure><img src="imgs/murales.jpg" alt="Murales de la fachada"><figcaption data-es="Murales de la fachada" data-en="Storefront murals">Murales de la fachada</figcaption></figure>
+<figure><img src="imgs/murales-2.jpg" alt="Murales de la fachada"><figcaption data-es="Murales de la fachada" data-en="Storefront murals">Murales de la fachada</figcaption></figure>
+<figure><img src="imgs/interior.jpg" alt="Interior de la tienda"><figcaption data-es="Interior de la tienda" data-en="Inside the store">Interior de la tienda</figcaption></figure>
+<figure><img src="imgs/soperas.jpg" alt="Soperas y coronas"><figcaption data-es="Soperas y coronas" data-en="Soperas and crowns">Soperas y coronas</figcaption></figure>
+<figure><img src="imgs/soperas-vitrina.jpg" alt="Soperas en la vitrina"><figcaption data-es="Soperas en la vitrina" data-en="Soperas in the window">Soperas en la vitrina</figcaption></figure>
+<figure><img src="imgs/tela-pavo.jpg" alt="Telas de la tienda"><figcaption data-es="Telas de la tienda" data-en="Store cloths">Telas de la tienda</figcaption></figure>
+<figure><img src="imgs/tela-ochosi.jpg" alt="Telas de la tienda"><figcaption data-es="Telas de la tienda" data-en="Store cloths">Telas de la tienda</figcaption></figure>
+<figure><img src="imgs/buda.jpg" alt="Imágenes y estatuas"><figcaption data-es="Imágenes y estatuas" data-en="Images and statues">Imágenes y estatuas</figcaption></figure>
+<figure><img src="imgs/camion.jpg" alt="Camión de la tienda"><figcaption data-es="Camión de la tienda" data-en="Store truck">Camión de la tienda</figcaption></figure>
+<figure><img src="imgs/tienda-atardecer.jpg" alt="La tienda al atardecer"><figcaption data-es="La tienda al atardecer" data-en="The store at dusk">La tienda al atardecer</figcaption></figure>
 </div>
 
 <p data-es="Lo que se ve en la tienda, sin fotos inventadas y sin inventar significados. El dueño confirma cualquier representación antes de publicar." data-en="What is seen in the store, without invented photos or invented meanings. The owner confirms any representation before publishing.">Lo que se ve en la tienda, sin fotos inventadas y sin inventar significados. El dueño confirma cualquier representación antes de publicar.</p>
@@ -96,21 +107,33 @@ footer a{color:#8a6d1f}
 <div class="card"><b data-es="🕯️ Velas, imágenes y vestidos" data-en="🕯️ Candles, images and dresses">🕯️ Velas, imágenes y vestidos</b><small data-es="Velas, estatuas y muñecas con vestidos elaborados, en los colores vivos que se ven en la tienda." data-en="Candles, statues and dolls in elaborate dresses, in the vivid colors seen in the store.">Velas, estatuas y muñecas con vestidos elaborados, en los colores vivos que se ven en la tienda.</small></div>
 <div class="card"><b data-es="🌿 Hierbas, baños y herramientas del altar" data-en="🌿 Herbs, baths and altar tools">🌿 Hierbas, baños y herramientas del altar</b><small data-es="Hierbas, baños, esencias y herramientas para el altar, como se venden en la tienda." data-en="Herbs, baths, essences and tools for the altar, as sold in the store.">Hierbas, baños, esencias y herramientas para el altar, como se venden en la tienda.</small></div>
 </div>
-<h2 data-es="Los colores de <em>la casa</em>" data-en="The colors of <em>the house</em>">Los colores de <em>la casa</em></h2>
-<p data-es="En esta tradición, cada santo tiene su color, su camino y su protección. Estos colores no se cambian, no se aclaran ni se mezclan: cada color pertenece a su santo, y así se respeta su significado. El dueño confirma cualquier representación antes de publicar." data-en="In this tradition, every orisha has its own color, path and protection. These colors are not changed, lightened or mixed: each color belongs to its orisha, and that is how its meaning is respected. The owner confirms any representation before publishing.">En esta tradición, cada santo tiene su color, su camino y su protección. Estos colores no se cambian, no se aclaran ni se mezclan: cada color pertenece a su santo, y así se respeta su significado. El dueño confirma cualquier representación antes de publicar.</p>
-<div class="palette">
-<div class="sw" style="background:linear-gradient(135deg,#6e1a1a 55%,#1d1a1a 55%)"><b>Elegguá</b><small data-es="Rojo y negro · abre los caminos" data-en="Red and black · opens the roads">Rojo y negro · abre los caminos</small></div>
-<div class="sw" style="background:linear-gradient(135deg,#3d5a35 55%,#1d1a1a 55%)"><b>Oggún</b><small data-es="Verde y negro · hierro y trabajo" data-en="Green and black · iron and work">Verde y negro · hierro y trabajo</small></div>
-<div class="sw" style="background:linear-gradient(135deg,#20586e 55%,#c9a227 55%)"><b>Ochosi</b><small data-es="Azul y amarillo · cazador y justicia" data-en="Blue and yellow · hunter and justice">Azul y amarillo · cazador y justicia</small></div>
-<div class="sw white"><b>Obatalá</b><small data-es="Blanco · paz y claridad" data-en="White · peace and clarity">Blanco · paz y claridad</small></div>
-<div class="sw" style="background:linear-gradient(135deg,#20586e 55%,#f7f2e6 55%)"><b>Yemayá</b><small data-es="Azul y blanco · madre de las aguas" data-en="Blue and white · mother of the waters">Azul y blanco · madre de las aguas</small></div>
-<div class="sw" style="background:#c9a227"><b>Oshún</b><small data-es="Amarillo dorado · dulzura y prosperidad" data-en="Golden yellow · sweetness and prosperity">Amarillo dorado · dulzura y prosperidad</small></div>
-<div class="sw" style="background:linear-gradient(135deg,#7a1f1f 55%,#f7f2e6 55%)"><b>Changó</b><small data-es="Rojo y blanco · fuerza y justicia" data-en="Red and white · strength and justice">Rojo y blanco · fuerza y justicia</small></div>
-<div class="sw" style="background:#5e2440"><b>Oyá</b><small data-es="Vino tinto · vientos y cambios" data-en="Wine red · winds and change">Vino tinto · vientos y cambios</small></div>
-<div class="sw" style="background:linear-gradient(135deg,#3d5a35 55%,#c9a227 55%)"><b>Orula</b><small data-es="Verde y amarillo · sabiduría y destino" data-en="Green and yellow · wisdom and destiny">Verde y amarillo · sabiduría y destino</small></div>
-<div class="sw" style="background:linear-gradient(135deg,#4a2c4a 55%,#6b4a2a 55%)"><b>Babalú Ayé</b><small data-es="Morado y marrón · salud y sanación" data-en="Purple and brown · health and healing">Morado y marrón · salud y sanación</small></div>
-</div>
 <p data-es="Cuatro Caminos no es solo una tienda: es un espacio de fe, respeto y tradición afrocubana, donde cada persona es atendida con conocimiento y con el corazón." data-en="Cuatro Caminos is more than a store: it is a space of faith, respect and Afro-Cuban tradition, where every person is served with knowledge and heart.">Cuatro Caminos no es solo una tienda: es un espacio de fe, respeto y tradición afrocubana, donde cada persona es atendida con conocimiento y con el corazón.</p>
+<h2 data-es="Haz tu encargo <em>por WhatsApp</em>" data-en="Place your order <em>on WhatsApp</em>">Haz tu encargo <em>por WhatsApp</em></h2>
+<p data-es="Sin pago en línea por ahora: mandas tu encargo por WhatsApp y la tienda te confirma disponibilidad y total." data-en="No online payment yet: send your order on WhatsApp and the store confirms availability and total.">Sin pago en línea por ahora: mandas tu encargo por WhatsApp y la tienda te confirma disponibilidad y total.</p>
+<div class="encargo">
+<label data-es="Tu nombre" data-en="Your name">Tu nombre</label>
+<input id="enc-nombre" type="text">
+<label data-es="¿Qué quieres encargar?" data-en="What would you like to order?">¿Qué quieres encargar?</label>
+<select id="enc-producto">
+<option data-es="Hierbas y plantas" data-en="Herbs and plants">Hierbas y plantas</option>
+<option data-es="Velas" data-en="Candles">Velas</option>
+<option data-es="Imágenes y estatuas" data-en="Images and statues">Imágenes y estatuas</option>
+<option data-es="Collares y cuentas" data-en="Necklaces and beads">Collares y cuentas</option>
+<option data-es="Baños y esencias" data-en="Baths and essences">Baños y esencias</option>
+<option data-es="Libros y guías" data-en="Books and guides">Libros y guías</option>
+<option data-es="Otro (especifícalo en la nota)" data-en="Other (specify in the note)">Otro (especifícalo en la nota)</option>
+</select>
+<label data-es="Cantidad" data-en="Quantity">Cantidad</label>
+<input id="enc-cantidad" type="number" min="1" value="1">
+<label data-es="¿Recoger en tienda o envío?" data-en="Store pickup or shipping?">¿Recoger en tienda o envío?</label>
+<select id="enc-modo">
+<option data-es="Recoger en tienda" data-en="Store pickup">Recoger en tienda</option>
+<option data-es="Envío (por coordinar)" data-en="Shipping (to coordinate)">Envío (por coordinar)</option>
+</select>
+<label data-es="Nota (opcional)" data-en="Note (optional)">Nota (opcional)</label>
+<textarea id="enc-nota" rows="3"></textarea>
+<button class="btn" type="button" onclick="enviarEncargo()" data-es="📲 Mandar encargo por WhatsApp" data-en="📲 Send order on WhatsApp">📲 Mandar encargo por WhatsApp</button>
+</div>
 <div class="visit">
 <h2 data-es="Visítanos" data-en="Visit us" style="margin-top:0">Visítanos</h2>
 <p><b>Botánica Cuatro Caminos</b><br>2310 W Waters Ave, Tampa, FL 33604<br>📞 <a href="tel:+18135135344">(813) 513-5344</a></p>
@@ -131,6 +154,7 @@ Botánica Cuatro Caminos · 2310 W Waters Ave, Tampa, FL 33604 · (813) 513-5344
 </footer>
 <script>
 function setLang(l){document.documentElement.lang=l;document.querySelectorAll('[data-es]').forEach(function(e){e.innerHTML=e.getAttribute(l==='es'?'data-es':'data-en')})}
+function enviarEncargo(){var n=document.getElementById('enc-nombre').value.trim();var p=document.getElementById('enc-producto').value;var c=document.getElementById('enc-cantidad').value||'1';var m=document.getElementById('enc-modo').value;var t=document.getElementById('enc-nota').value.trim();if(!n){alert(document.documentElement.lang==='en'?'Please write your name.':'Escribe tu nombre.');return}var msg='Hola Botánica Cuatro Caminos, quiero hacer un encargo:\n• Nombre: '+n+'\n• Producto: '+p+'\n• Cantidad: '+c+'\n• '+m+(t?'\n• Nota: '+t:'');window.open('https://wa.me/18135135344?text='+encodeURIComponent(msg),'_blank')}
 </script>
 </body>
 </html>
