@@ -5,12 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Botánica Cuatro Caminos — Tampa, FL</title>
 <meta name="description" content="Botánica Cuatro Caminos en Tampa, FL. 40 años de tradición, 5 botánicas juntas. 2310 W Waters Ave. (813) 513-5344.">
+<link rel="icon" href="imgs/logo.jpg">
+<link rel="apple-touch-icon" href="imgs/logo.jpg">
 <style>
 *{box-sizing:border-box}
 body{margin:0;background:var(--fondo);color:var(--texto);font-family:Georgia,serif}
 header{max-width:720px;margin:0 auto;padding:18px 20px;display:flex;justify-content:space-between;align-items:center;gap:10px}
 .brand{font-size:21px;font-weight:bold;display:flex;align-items:center;gap:12px}
-.cauri{width:36px;height:26px;border-radius:50%;background:var(--marco);position:relative;flex:none;box-shadow:inset 0 -4px 0 rgba(0,0,0,.28)}.cauri::after{content:"";position:absolute;left:7px;right:7px;top:50%;height:3px;margin-top:-1px;background:rgba(0,0,0,.35);border-radius:2px}
+.logo{width:64px;height:64px;border-radius:50%;border:3px solid var(--marco);object-fit:cover;flex:none}
 .brand small{display:block;font-size:13px;color:var(--acento);letter-spacing:2px}
 .lang button{border:2px solid var(--marco);background:var(--tarjeta);color:var(--texto);padding:8px 12px;border-radius:20px;font-weight:bold;cursor:pointer}
 .hero{max-width:720px;margin:0 auto;padding:10px 20px 30px}
@@ -82,7 +84,7 @@ body.tema-lujo{background-image:repeating-linear-gradient(45deg,rgba(201,168,106
 <body class="tema-verde">
 <div class="selector"><span data-es="🎨 Diseños — elige cómo se ve la página (temporal, solo para elegir)" data-en="🎨 Designs — choose how the page looks (temporary, just to choose)">🎨 Diseños — elige cómo se ve la página (temporal, solo para elegir)</span><br><button type="button" onclick="setTheme('tema-verde')" data-tema-btn="tema-verde">Nº I Verde de la Casa</button> <button type="button" onclick="setTheme('tema-original')" data-tema-btn="tema-original">Nº II Crema y Dorado</button> <button type="button" onclick="setTheme('tema-lujo')" data-tema-btn="tema-lujo">Nº III Noche Premium</button></div>
 <header>
-<div class="brand"><span class="cauri" aria-hidden="true"></span><div>Botánica Cuatro Caminos<small>TAMPA, FLORIDA</small></div></div>
+<div class="brand"><img class="logo" src="imgs/logo.jpg" alt="Logo Botánica Cuatro Caminos"><div>Botánica Cuatro Caminos<small>TAMPA, FLORIDA</small></div></div>
 <div class="lang"><button onclick="setLang('es')">ES</button> <button onclick="setLang('en')">EN</button></div>
 </header>
 <div class="hilo"></div>
