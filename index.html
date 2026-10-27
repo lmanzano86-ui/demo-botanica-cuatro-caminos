@@ -38,18 +38,6 @@ body.tema-verde .cards .card:nth-child(1){border-top-color:#7a2a2a}body.tema-ver
 .precio{background:var(--tarjeta);border:3px solid var(--marco);border-radius:18px;padding:22px;margin:16px 0;display:flex;justify-content:space-between;align-items:center;gap:14px}
 .precio b{font-size:20px}
 .precio strong{font-size:38px;color:var(--precio-fuerte);white-space:nowrap}
-.tienda-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:16px}
-.prod .cat{display:inline-block;font-size:13px;font-weight:bold;letter-spacing:1px;color:var(--acento);margin-bottom:6px}
-.prod .muestra{display:block;font-size:13px;font-weight:bold;color:var(--precio-fuerte);margin-top:10px}
-.prod .pr{display:block;font-size:17px;font-weight:bold;margin:2px 0 10px}
-.addbtn{padding:10px 16px;font-size:16px}
-.filtros{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
-.fbtn{border:2px solid var(--marco);background:var(--tarjeta);color:var(--texto);padding:8px 14px;border-radius:20px;font-weight:bold;cursor:pointer;font-family:Georgia,serif;font-size:15px}
-.fbtn.activo{background:var(--btn-fondo);color:var(--btn-texto)}
-#pedido-lista{margin:10px 0;padding-left:20px}
-#pedido-lista li{font-size:17px;margin:6px 0}
-.qbtn{border:2px solid var(--marco);background:var(--tarjeta);color:var(--texto);border-radius:50%;width:30px;height:30px;font-weight:bold;cursor:pointer;margin:0 4px}
-@media(max-width:640px){.tienda-grid{grid-template-columns:1fr}}
 .pendiente{background:#5e2440;color:#fff;border-radius:12px;padding:14px 16px;font-size:16px;line-height:1.6}
 .galeria{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:16px}
 .galeria img{width:100%;border-radius:16px;border:2px solid var(--marco)}
@@ -146,127 +134,6 @@ body.tema-lujo{background-image:repeating-linear-gradient(45deg,rgba(201,168,106
 </div>
 <p data-es="Cuatro Caminos no es solo una tienda: es un espacio de fe, respeto y tradición afrocubana, donde cada persona es atendida con conocimiento y con el corazón." data-en="Cuatro Caminos is more than a store: it is a space of faith, respect and Afro-Cuban tradition, where every person is served with knowledge and heart.">Cuatro Caminos no es solo una tienda: es un espacio de fe, respeto y tradición afrocubana, donde cada persona es atendida con conocimiento y con el corazón.</p>
 <div class="cuentas" aria-hidden="true"></div>
-
-<div class="cuentas" aria-hidden="true"></div>
-<h2 data-es="Tienda <em>online</em>" data-en="Online <em>store</em>">Tienda <em>online</em></h2>
-<p data-es="Arma tu pedido aquí mismo: agregas lo que quieres y lo mandas por WhatsApp. La tienda te confirma disponibilidad y precio antes de pagar — sin pago en línea por ahora. Los productos de esta sección son de muestra, con las categorías de la tienda; los precios reales los confirma la dueña." data-en="Build your order right here: add what you want and send it on WhatsApp. The store confirms availability and price before you pay — no online payment yet. Products in this section are samples, with the store's categories; real prices are confirmed by the owner.">Arma tu pedido aquí mismo: agregas lo que quieres y lo mandas por WhatsApp. La tienda te confirma disponibilidad y precio antes de pagar — sin pago en línea por ahora. Los productos de esta sección son de muestra, con las categorías de la tienda; los precios reales los confirma la dueña.</p>
-<div class="filtros"><button type="button" class="fbtn activo" onclick="filtrarTienda('todas',this)" data-es="Todo" data-en="All">Todo</button><button type="button" class="fbtn" onclick="filtrarTienda('hierbas',this)" data-es="🌿 Hierbas y plantas" data-en="🌿 Herbs and plants">🌿 Hierbas y plantas</button><button type="button" class="fbtn" onclick="filtrarTienda('velas',this)" data-es="🕯️ Velas" data-en="🕯️ Candles">🕯️ Velas</button><button type="button" class="fbtn" onclick="filtrarTienda('imagenes',this)" data-es="🗿 Imágenes y estatuas" data-en="🗿 Images and statues">🗿 Imágenes y estatuas</button><button type="button" class="fbtn" onclick="filtrarTienda('collares',this)" data-es="📿 Collares y cuentas" data-en="📿 Necklaces and beads">📿 Collares y cuentas</button><button type="button" class="fbtn" onclick="filtrarTienda('soperas',this)" data-es="🏺 Soperas" data-en="🏺 Soperas">🏺 Soperas</button><button type="button" class="fbtn" onclick="filtrarTienda('banos',this)" data-es="🛁 Baños y esencias" data-en="🛁 Baths and essences">🛁 Baños y esencias</button><button type="button" class="fbtn" onclick="filtrarTienda('libros',this)" data-es="📖 Libros y guías" data-en="📖 Books and guides">📖 Libros y guías</button></div>
-<div class="tienda-grid" id="tienda-grid">
-<div class="card prod" data-cat="hierbas" data-id="p01">
-<span class="cat" data-es="🌿 Hierbas y plantas" data-en="🌿 Herbs and plants">🌿 Hierbas y plantas</span>
-<b data-es="Ramillete de hierbas frescas" data-en="Fresh herb bundle">Ramillete de hierbas frescas</b>
-<small data-es="Hierbas y raíces de la tradición, según la disponibilidad del día." data-en="Herbs and roots of the tradition, subject to daily availability.">Hierbas y raíces de la tradición, según la disponibilidad del día.</small>
-<span class="muestra" data-es="Producto de muestra" data-en="Sample product">Producto de muestra</span>
-<span class="pr" data-es="Precio en tienda" data-en="Price in store">Precio en tienda</span>
-<button class="btn addbtn" type="button" onclick="agregarPedido('p01')" data-es="➕ Agregar al pedido" data-en="➕ Add to order">➕ Agregar al pedido</button>
-</div><div class="card prod" data-cat="hierbas" data-id="p02">
-<span class="cat" data-es="🌿 Hierbas y plantas" data-en="🌿 Herbs and plants">🌿 Hierbas y plantas</span>
-<b data-es="Hierbas secas surtidas" data-en="Assorted dried herbs">Hierbas secas surtidas</b>
-<small data-es="Hierbas secas para la casa, en bolsitas." data-en="Dried herbs for the home, in small bags.">Hierbas secas para la casa, en bolsitas.</small>
-<span class="muestra" data-es="Producto de muestra" data-en="Sample product">Producto de muestra</span>
-<span class="pr" data-es="Precio en tienda" data-en="Price in store">Precio en tienda</span>
-<button class="btn addbtn" type="button" onclick="agregarPedido('p02')" data-es="➕ Agregar al pedido" data-en="➕ Add to order">➕ Agregar al pedido</button>
-</div><div class="card prod" data-cat="velas" data-id="p03">
-<span class="cat" data-es="🕯️ Velas" data-en="🕯️ Candles">🕯️ Velas</span>
-<b data-es="Veladora de vaso" data-en="Glass candle">Veladora de vaso</b>
-<small data-es="Veladoras de vaso, como las de la vitrina de la tienda." data-en="Glass candles, like the ones in the store window.">Veladoras de vaso, como las de la vitrina de la tienda.</small>
-<span class="muestra" data-es="Producto de muestra" data-en="Sample product">Producto de muestra</span>
-<span class="pr" data-es="Precio en tienda" data-en="Price in store">Precio en tienda</span>
-<button class="btn addbtn" type="button" onclick="agregarPedido('p03')" data-es="➕ Agregar al pedido" data-en="➕ Add to order">➕ Agregar al pedido</button>
-</div><div class="card prod" data-cat="velas" data-id="p04">
-<span class="cat" data-es="🕯️ Velas" data-en="🕯️ Candles">🕯️ Velas</span>
-<b data-es="Vela de 7 días" data-en="7-day candle">Vela de 7 días</b>
-<small data-es="Velas largas de colores variados." data-en="Long candles in assorted colors.">Velas largas de colores variados.</small>
-<span class="muestra" data-es="Producto de muestra" data-en="Sample product">Producto de muestra</span>
-<span class="pr" data-es="Precio en tienda" data-en="Price in store">Precio en tienda</span>
-<button class="btn addbtn" type="button" onclick="agregarPedido('p04')" data-es="➕ Agregar al pedido" data-en="➕ Add to order">➕ Agregar al pedido</button>
-</div><div class="card prod" data-cat="imagenes" data-id="p05">
-<span class="cat" data-es="🗿 Imágenes y estatuas" data-en="🗿 Images and statues">🗿 Imágenes y estatuas</span>
-<b data-es="Imagen o estatua" data-en="Image or statue">Imagen o estatua</b>
-<small data-es="Imágenes y estatuas en varios tamaños, como se ven en la tienda." data-en="Images and statues in several sizes, as seen in the store.">Imágenes y estatuas en varios tamaños, como se ven en la tienda.</small>
-<span class="muestra" data-es="Producto de muestra" data-en="Sample product">Producto de muestra</span>
-<span class="pr" data-es="Precio en tienda" data-en="Price in store">Precio en tienda</span>
-<button class="btn addbtn" type="button" onclick="agregarPedido('p05')" data-es="➕ Agregar al pedido" data-en="➕ Add to order">➕ Agregar al pedido</button>
-</div><div class="card prod" data-cat="imagenes" data-id="p06">
-<span class="cat" data-es="🗿 Imágenes y estatuas" data-en="🗿 Images and statues">🗿 Imágenes y estatuas</span>
-<b data-es="Muñeca con vestido" data-en="Dressed doll">Muñeca con vestido</b>
-<small data-es="Muñecas con vestidos elaborados, hechos a mano." data-en="Dolls in elaborate handmade dresses.">Muñecas con vestidos elaborados, hechos a mano.</small>
-<span class="muestra" data-es="Producto de muestra" data-en="Sample product">Producto de muestra</span>
-<span class="pr" data-es="Precio en tienda" data-en="Price in store">Precio en tienda</span>
-<button class="btn addbtn" type="button" onclick="agregarPedido('p06')" data-es="➕ Agregar al pedido" data-en="➕ Add to order">➕ Agregar al pedido</button>
-</div><div class="card prod" data-cat="collares" data-id="p07">
-<span class="cat" data-es="📿 Collares y cuentas" data-en="📿 Necklaces and beads">📿 Collares y cuentas</span>
-<b data-es="Eleke — collar de cuentas" data-en="Eleke — bead necklace">Eleke — collar de cuentas</b>
-<small data-es="Collares de cuentas hechos a mano, con patrones tradicionales." data-en="Handmade bead necklaces with traditional patterns.">Collares de cuentas hechos a mano, con patrones tradicionales.</small>
-<span class="muestra" data-es="Producto de muestra" data-en="Sample product">Producto de muestra</span>
-<span class="pr" data-es="Precio en tienda" data-en="Price in store">Precio en tienda</span>
-<button class="btn addbtn" type="button" onclick="agregarPedido('p07')" data-es="➕ Agregar al pedido" data-en="➕ Add to order">➕ Agregar al pedido</button>
-</div><div class="card prod" data-cat="collares" data-id="p08">
-<span class="cat" data-es="📿 Collares y cuentas" data-en="📿 Necklaces and beads">📿 Collares y cuentas</span>
-<b data-es="Pulsera de cuentas" data-en="Bead bracelet">Pulsera de cuentas</b>
-<small data-es="Pulseras de cuentas en combinaciones tradicionales." data-en="Bead bracelets in traditional combinations.">Pulseras de cuentas en combinaciones tradicionales.</small>
-<span class="muestra" data-es="Producto de muestra" data-en="Sample product">Producto de muestra</span>
-<span class="pr" data-es="Precio en tienda" data-en="Price in store">Precio en tienda</span>
-<button class="btn addbtn" type="button" onclick="agregarPedido('p08')" data-es="➕ Agregar al pedido" data-en="➕ Add to order">➕ Agregar al pedido</button>
-</div><div class="card prod" data-cat="soperas" data-id="p09">
-<span class="cat" data-es="🏺 Soperas" data-en="🏺 Soperas">🏺 Soperas</span>
-<b data-es="Sopera de cerámica" data-en="Ceramic sopera">Sopera de cerámica</b>
-<small data-es="Soperas con tapa, en cerámica, varios colores y tamaños." data-en="Lidded soperas in ceramic, several colors and sizes.">Soperas con tapa, en cerámica, varios colores y tamaños.</small>
-<span class="muestra" data-es="Producto de muestra" data-en="Sample product">Producto de muestra</span>
-<span class="pr" data-es="Precio en tienda" data-en="Price in store">Precio en tienda</span>
-<button class="btn addbtn" type="button" onclick="agregarPedido('p09')" data-es="➕ Agregar al pedido" data-en="➕ Add to order">➕ Agregar al pedido</button>
-</div><div class="card prod" data-cat="soperas" data-id="p10">
-<span class="cat" data-es="🏺 Soperas" data-en="🏺 Soperas">🏺 Soperas</span>
-<b data-es="Sopera de porcelana" data-en="Porcelain sopera">Sopera de porcelana</b>
-<small data-es="Soperas de porcelana, como las de la vitrina." data-en="Porcelain soperas, like the ones in the window.">Soperas de porcelana, como las de la vitrina.</small>
-<span class="muestra" data-es="Producto de muestra" data-en="Sample product">Producto de muestra</span>
-<span class="pr" data-es="Precio en tienda" data-en="Price in store">Precio en tienda</span>
-<button class="btn addbtn" type="button" onclick="agregarPedido('p10')" data-es="➕ Agregar al pedido" data-en="➕ Add to order">➕ Agregar al pedido</button>
-</div><div class="card prod" data-cat="banos" data-id="p11">
-<span class="cat" data-es="🛁 Baños y esencias" data-en="🛁 Baths and essences">🛁 Baños y esencias</span>
-<b data-es="Baño preparado" data-en="Prepared bath">Baño preparado</b>
-<small data-es="Baños preparados de la tradición, listos para llevar." data-en="Prepared traditional baths, ready to take home.">Baños preparados de la tradición, listos para llevar.</small>
-<span class="muestra" data-es="Producto de muestra" data-en="Sample product">Producto de muestra</span>
-<span class="pr" data-es="Precio en tienda" data-en="Price in store">Precio en tienda</span>
-<button class="btn addbtn" type="button" onclick="agregarPedido('p11')" data-es="➕ Agregar al pedido" data-en="➕ Add to order">➕ Agregar al pedido</button>
-</div><div class="card prod" data-cat="banos" data-id="p12">
-<span class="cat" data-es="🛁 Baños y esencias" data-en="🛁 Baths and essences">🛁 Baños y esencias</span>
-<b data-es="Esencia y perfume espiritual" data-en="Essence and spiritual perfume">Esencia y perfume espiritual</b>
-<small data-es="Esencias y perfumes espirituales de la tienda." data-en="Essences and spiritual perfumes from the store.">Esencias y perfumes espirituales de la tienda.</small>
-<span class="muestra" data-es="Producto de muestra" data-en="Sample product">Producto de muestra</span>
-<span class="pr" data-es="Precio en tienda" data-en="Price in store">Precio en tienda</span>
-<button class="btn addbtn" type="button" onclick="agregarPedido('p12')" data-es="➕ Agregar al pedido" data-en="➕ Add to order">➕ Agregar al pedido</button>
-</div><div class="card prod" data-cat="libros" data-id="p13">
-<span class="cat" data-es="📖 Libros y guías" data-en="📖 Books and guides">📖 Libros y guías</span>
-<b data-es="Libro de la tradición" data-en="Book of the tradition">Libro de la tradición</b>
-<small data-es="Libros para aprender de la tradición afrocubana." data-en="Books to learn about the Afro-Cuban tradition.">Libros para aprender de la tradición afrocubana.</small>
-<span class="muestra" data-es="Producto de muestra" data-en="Sample product">Producto de muestra</span>
-<span class="pr" data-es="Precio en tienda" data-en="Price in store">Precio en tienda</span>
-<button class="btn addbtn" type="button" onclick="agregarPedido('p13')" data-es="➕ Agregar al pedido" data-en="➕ Add to order">➕ Agregar al pedido</button>
-</div><div class="card prod" data-cat="libros" data-id="p14">
-<span class="cat" data-es="📖 Libros y guías" data-en="📖 Books and guides">📖 Libros y guías</span>
-<b data-es="Guía y cuaderno de notas" data-en="Guide and notebook">Guía y cuaderno de notas</b>
-<small data-es="Guías y cuadernos para tus notas y tu aprendizaje." data-en="Guides and notebooks for your notes and learning.">Guías y cuadernos para tus notas y tu aprendizaje.</small>
-<span class="muestra" data-es="Producto de muestra" data-en="Sample product">Producto de muestra</span>
-<span class="pr" data-es="Precio en tienda" data-en="Price in store">Precio en tienda</span>
-<button class="btn addbtn" type="button" onclick="agregarPedido('p14')" data-es="➕ Agregar al pedido" data-en="➕ Add to order">➕ Agregar al pedido</button>
-</div>
-</div>
-<div class="encargo" id="pedido-box">
-<b style="font-size:20px" data-es="🧺 Tu pedido" data-en="🧺 Your order">🧺 Tu pedido</b>
-<ul id="pedido-lista"></ul>
-<p id="pedido-vacio" data-es="Tu pedido está vacío. Agrega productos de la tienda y aparecerán aquí." data-en="Your order is empty. Add products from the store and they will appear here.">Tu pedido está vacío. Agrega productos de la tienda y aparecerán aquí.</p>
-<label data-es="Tu nombre" data-en="Your name">Tu nombre</label>
-<input id="ped-nombre" type="text">
-<label data-es="¿Recoger en tienda o envío?" data-en="Store pickup or shipping?">¿Recoger en tienda o envío?</label>
-<select id="ped-modo">
-<option data-es="Recoger en tienda" data-en="Store pickup">Recoger en tienda</option>
-<option data-es="Envío (por coordinar)" data-en="Shipping (to coordinate)">Envío (por coordinar)</option>
-</select>
-<button class="btn" type="button" onclick="enviarPedido()" data-es="📲 Mandar pedido por WhatsApp" data-en="📲 Send order on WhatsApp">📲 Mandar pedido por WhatsApp</button>
-<p data-es="¿No ves lo que buscas? Más abajo puedes hacer un encargo general." data-en="Don't see what you are looking for? Below you can place a general order.">¿No ves lo que buscas? Más abajo puedes hacer un encargo general.</p>
-</div>
-<script type="application/json" id="catalogo-datos">[{"id": "p01", "categoria": "hierbas", "nombre_es": "Ramillete de hierbas frescas", "nombre_en": "Fresh herb bundle", "descripcion_es": "Hierbas y raíces de la tradición, según la disponibilidad del día.", "descripcion_en": "Herbs and roots of the tradition, subject to daily availability.", "precio": null, "moneda": "USD", "foto": null, "activo": true, "nota": "producto de muestra; precio y disponibilidad los confirma la dueña"}, {"id": "p02", "categoria": "hierbas", "nombre_es": "Hierbas secas surtidas", "nombre_en": "Assorted dried herbs", "descripcion_es": "Hierbas secas para la casa, en bolsitas.", "descripcion_en": "Dried herbs for the home, in small bags.", "precio": null, "moneda": "USD", "foto": null, "activo": true, "nota": "producto de muestra; precio y disponibilidad los confirma la dueña"}, {"id": "p03", "categoria": "velas", "nombre_es": "Veladora de vaso", "nombre_en": "Glass candle", "descripcion_es": "Veladoras de vaso, como las de la vitrina de la tienda.", "descripcion_en": "Glass candles, like the ones in the store window.", "precio": null, "moneda": "USD", "foto": null, "activo": true, "nota": "producto de muestra; precio y disponibilidad los confirma la dueña"}, {"id": "p04", "categoria": "velas", "nombre_es": "Vela de 7 días", "nombre_en": "7-day candle", "descripcion_es": "Velas largas de colores variados.", "descripcion_en": "Long candles in assorted colors.", "precio": null, "moneda": "USD", "foto": null, "activo": true, "nota": "producto de muestra; precio y disponibilidad los confirma la dueña"}, {"id": "p05", "categoria": "imagenes", "nombre_es": "Imagen o estatua", "nombre_en": "Image or statue", "descripcion_es": "Imágenes y estatuas en varios tamaños, como se ven en la tienda.", "descripcion_en": "Images and statues in several sizes, as seen in the store.", "precio": null, "moneda": "USD", "foto": null, "activo": true, "nota": "producto de muestra; precio y disponibilidad los confirma la dueña"}, {"id": "p06", "categoria": "imagenes", "nombre_es": "Muñeca con vestido", "nombre_en": "Dressed doll", "descripcion_es": "Muñecas con vestidos elaborados, hechos a mano.", "descripcion_en": "Dolls in elaborate handmade dresses.", "precio": null, "moneda": "USD", "foto": null, "activo": true, "nota": "producto de muestra; precio y disponibilidad los confirma la dueña"}, {"id": "p07", "categoria": "collares", "nombre_es": "Eleke — collar de cuentas", "nombre_en": "Eleke — bead necklace", "descripcion_es": "Collares de cuentas hechos a mano, con patrones tradicionales.", "descripcion_en": "Handmade bead necklaces with traditional patterns.", "precio": null, "moneda": "USD", "foto": null, "activo": true, "nota": "producto de muestra; precio y disponibilidad los confirma la dueña"}, {"id": "p08", "categoria": "collares", "nombre_es": "Pulsera de cuentas", "nombre_en": "Bead bracelet", "descripcion_es": "Pulseras de cuentas en combinaciones tradicionales.", "descripcion_en": "Bead bracelets in traditional combinations.", "precio": null, "moneda": "USD", "foto": null, "activo": true, "nota": "producto de muestra; precio y disponibilidad los confirma la dueña"}, {"id": "p09", "categoria": "soperas", "nombre_es": "Sopera de cerámica", "nombre_en": "Ceramic sopera", "descripcion_es": "Soperas con tapa, en cerámica, varios colores y tamaños.", "descripcion_en": "Lidded soperas in ceramic, several colors and sizes.", "precio": null, "moneda": "USD", "foto": null, "activo": true, "nota": "producto de muestra; precio y disponibilidad los confirma la dueña"}, {"id": "p10", "categoria": "soperas", "nombre_es": "Sopera de porcelana", "nombre_en": "Porcelain sopera", "descripcion_es": "Soperas de porcelana, como las de la vitrina.", "descripcion_en": "Porcelain soperas, like the ones in the window.", "precio": null, "moneda": "USD", "foto": null, "activo": true, "nota": "producto de muestra; precio y disponibilidad los confirma la dueña"}, {"id": "p11", "categoria": "banos", "nombre_es": "Baño preparado", "nombre_en": "Prepared bath", "descripcion_es": "Baños preparados de la tradición, listos para llevar.", "descripcion_en": "Prepared traditional baths, ready to take home.", "precio": null, "moneda": "USD", "foto": null, "activo": true, "nota": "producto de muestra; precio y disponibilidad los confirma la dueña"}, {"id": "p12", "categoria": "banos", "nombre_es": "Esencia y perfume espiritual", "nombre_en": "Essence and spiritual perfume", "descripcion_es": "Esencias y perfumes espirituales de la tienda.", "descripcion_en": "Essences and spiritual perfumes from the store.", "precio": null, "moneda": "USD", "foto": null, "activo": true, "nota": "producto de muestra; precio y disponibilidad los confirma la dueña"}, {"id": "p13", "categoria": "libros", "nombre_es": "Libro de la tradición", "nombre_en": "Book of the tradition", "descripcion_es": "Libros para aprender de la tradición afrocubana.", "descripcion_en": "Books to learn about the Afro-Cuban tradition.", "precio": null, "moneda": "USD", "foto": null, "activo": true, "nota": "producto de muestra; precio y disponibilidad los confirma la dueña"}, {"id": "p14", "categoria": "libros", "nombre_es": "Guía y cuaderno de notas", "nombre_en": "Guide and notebook", "descripcion_es": "Guías y cuadernos para tus notas y tu aprendizaje.", "descripcion_en": "Guides and notebooks for your notes and learning.", "precio": null, "moneda": "USD", "foto": null, "activo": true, "nota": "producto de muestra; precio y disponibilidad los confirma la dueña"}]</script>
 <h2 data-es="Haz tu encargo <em>por WhatsApp</em>" data-en="Place your order <em>on WhatsApp</em>">Haz tu encargo <em>por WhatsApp</em></h2>
 <p data-es="Sin pago en línea por ahora: mandas tu encargo por WhatsApp y la tienda te confirma disponibilidad y total." data-en="No online payment yet: send your order on WhatsApp and the store confirms availability and total.">Sin pago en línea por ahora: mandas tu encargo por WhatsApp y la tienda te confirma disponibilidad y total.</p>
 <div class="encargo">
@@ -315,13 +182,6 @@ Botánica Cuatro Caminos · 2310 W Waters Ave, Tampa, FL 33604 · (813) 513-5344
 <script>
 function setLang(l){document.documentElement.lang=l;document.querySelectorAll('[data-es]').forEach(function(e){e.innerHTML=e.getAttribute(l==='es'?'data-es':'data-en')})}
 function enviarEncargo(){var n=document.getElementById('enc-nombre').value.trim();var p=document.getElementById('enc-producto').value;var c=document.getElementById('enc-cantidad').value||'1';var m=document.getElementById('enc-modo').value;var t=document.getElementById('enc-nota').value.trim();if(!n){alert(document.documentElement.lang==='en'?'Please write your name.':'Escribe tu nombre.');return}var msg='Hola Botánica Cuatro Caminos, quiero hacer un encargo:\n• Nombre: '+n+'\n• Producto: '+p+'\n• Cantidad: '+c+'\n• '+m+(t?'\n• Nota: '+t:'');window.open('https://wa.me/18135135344?text='+encodeURIComponent(msg),'_blank')}
-var PEDIDO={};
-function nombreProd(id){var el=document.querySelector('.prod[data-id="'+id+'"] b');if(!el)return id;return el.getAttribute(document.documentElement.lang==='en'?'data-en':'data-es')||el.textContent}
-function filtrarTienda(cat,btn){document.querySelectorAll('.prod').forEach(function(c){c.style.display=(cat==='todas'||c.getAttribute('data-cat')===cat)?'':'none'});document.querySelectorAll('.fbtn').forEach(function(b){b.classList.toggle('activo',b===btn)})}
-function agregarPedido(id){PEDIDO[id]=(PEDIDO[id]||0)+1;renderPedido()}
-function cambiarCant(id,d){PEDIDO[id]=(PEDIDO[id]||0)+d;if(PEDIDO[id]<=0)delete PEDIDO[id];renderPedido()}
-function renderPedido(){var ul=document.getElementById('pedido-lista');var vacio=document.getElementById('pedido-vacio');ul.innerHTML='';var ids=Object.keys(PEDIDO);vacio.style.display=ids.length?'none':'';ids.forEach(function(id){var li=document.createElement('li');li.textContent=nombreProd(id)+' × '+PEDIDO[id]+' ';var menos=document.createElement('button');menos.type='button';menos.className='qbtn';menos.textContent='−';menos.onclick=function(){cambiarCant(id,-1)};var mas=document.createElement('button');mas.type='button';mas.className='qbtn';mas.textContent='+';mas.onclick=function(){cambiarCant(id,1)};li.appendChild(menos);li.appendChild(mas);ul.appendChild(li)})}
-function enviarPedido(){var ids=Object.keys(PEDIDO);var en=document.documentElement.lang==='en';if(!ids.length){alert(en?'Your order is empty. Add a product first.':'Tu pedido está vacío. Agrega un producto primero.');return}var n=document.getElementById('ped-nombre').value.trim();if(!n){alert(en?'Please write your name.':'Escribe tu nombre.');return}var m=document.getElementById('ped-modo').value;var lineas=ids.map(function(id){return '• '+nombreProd(id)+' × '+PEDIDO[id]});var msg=(en?'Hello Botánica Cuatro Caminos, this is my online store order:':'Hola Botánica Cuatro Caminos, este es mi pedido de la tienda online:')+'\n'+lineas.join('\n')+'\n• '+(en?'Name: ':'Nombre: ')+n+'\n• '+m;window.open('https://wa.me/18135135344?text='+encodeURIComponent(msg),'_blank')}
 function setTheme(t){document.body.className=t;try{localStorage.setItem('botanica-tema',t)}catch(e){}document.querySelectorAll('[data-tema-btn]').forEach(function(b){b.classList.toggle('activo',b.getAttribute('data-tema-btn')===t)})}
 (function(){var t=null;try{t=localStorage.getItem('botanica-tema')}catch(e){}setTheme(t||'tema-verde')})();
 </script>
